@@ -104,7 +104,8 @@ export default Ember.Component.extend({
 
   dragOver(event) {
    if (this.get('isSortable')) {
-     this.get('dragCoordinator').draggingOver(event, this);
+    let parentEmberObject = this.get('parentEmberObject');
+     this.get('dragCoordinator').draggingOver(event, this, parentEmberObject);
    }
     return false;
   },
